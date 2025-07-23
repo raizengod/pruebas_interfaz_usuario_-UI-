@@ -49,5 +49,5 @@ jobs:
         if: always() # Siempre sube el artefacto, incluso si las pruebas fallan
         with:
           name: playwright-test-report # Nombre del artefacto en GitHub Actions
-          path: reportes/html/playwright_reporte.html # Ruta del informe generado
+          path: reportes/html1/playwright_reporte.html # Ruta del informe generado
           retention-days: 30 # Días que el artefacto estará disponible
