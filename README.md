@@ -73,10 +73,7 @@ La estructura del proyecto está diseñada para ser clara, modular y fácil de m
 │       └── logger.py           # Configuración del sistema de logging
 ├── test/
 │   ├── archivos/               # Archivos de prueba (ej. para upload/download)
-│   │   ├── archivos_data_escritura/
-│   │   ├── archivos_data_fuente/
-│   │   ├── archivos_download/
-│   │   └── archivos_upload/
+│   │   └── archivos_data_fuente/
 │   ├── reportes/               # Directorio para almacenar evidencias de las pruebas
 │   │   ├── html/               # Informes HTML
 │   │   ├── video/              # Grabaciones de video de las ejecuciones
