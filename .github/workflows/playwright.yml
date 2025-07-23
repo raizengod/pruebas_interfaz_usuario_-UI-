@@ -1,4 +1,4 @@
-name: Automation Testing Practice # Nombre del flujo de trabajo
+name: Automation Testing Practice
 
 on:
   push:
@@ -9,45 +9,36 @@ on:
     branches:
       - main
       - master
-  workflow_dispatch: # Permite ejecutar el workflow manualmente desde la UI de GitHub
-
+  workflow_dispatch: # Permite ejecutar el workflow manualmente
+    
 jobs:
   test:
-    timeout-minutes: 60 # Tiempo máximo de ejecución para el job
-    runs-on: ubuntu-latest # Sistema operativo donde se ejecutarán las pruebas
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout del código # Paso para clonar el repositorio
-        uses: actions/checkout@v4
-
-      - name: Configurar Python ${{ matrix.python-version }} # Configura la versión de Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: '3.13.5' # Asegúrate de que esta sea la versión de Python que usas localmente
-
-      - name: Instalar dependencias de Python # Instala las librerías de Python desde requirements.txt
+          python-version: '3.13.5' # Asegúrate de que esta sea la versión de Python que usas
+      - name: Instalar dependencias de Python
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt # Asegúrate de que pytest y pytest-playwright estén en requirements.txt
-
-      - name: Instalar navegadores de Playwright # Descarga los navegadores necesarios para Playwright
-        run: playwright install --with-deps # --with-deps también instala dependencias del sistema
-
-      - name: Ejecutar pruebas de Playwright # ¡CORRECCIÓN AQUÍ! Se añade 'pytest'
+          pip install -r requirements.txt # Asegúrate de que pytest-playwright esté en requirements.txt
+      - name: Instalar navegadores de Playwright
+        run: playwright install --with-deps
+      - name: Ejecutar pruebas de Playwright
         run: |
-          # Asegúrate de que pytest-html o pytest-reporter-html1 esté incluido en requirements.txt
-          # Este comando ejecuta las pruebas en el directorio PRV/test/
-          # -s: muestra la salida de print/logging
-          # -v: modo verbose (más detalles)
-          # -n 4: ejecuta las pruebas en paralelo con 4 workers (opcional, si tu framework lo soporta bien)
-          # --html=reportes/html/playwright_reporte.html: genera un informe HTML
-          # --self-contained-html: incluye CSS/JS en el mismo archivo HTML para fácil visualización
-          pytest PRV/test/ -s -v -n 5 --template=html1/index.html --report=reportes/html1/playwright_reporte.html
-
-      - name: Subir informe de pruebas (para depuración o descarga) # Sube el informe como un artefacto
+          # Asegúrate de que pytest-reporter-html1 esté incluido en requirements.txt (pip install pytest-reporter-html1)
+          # Aquí estoy simplificando el comando para que pytest genere el reporte HTML directamente
+          # Si necesitas el orden específico y el template, ajusta el comando según tu necesidad.
+          # Asegúrate de que 'reportes/html1/' exista o pytest lo creará.
+          pytest PRV/test/ -s -v --template=html1/index.html --report=reportes/html1/playwright_reporte.html
+        
+      - name: Subir informe de pruebas de Playwright (para debugging o descarga)
         uses: actions/upload-artifact@v4
-        if: always() # Siempre sube el artefacto, incluso si las pruebas fallan
+        if: always()
         with:
-          name: playwright-test-report # Nombre del artefacto en GitHub Actions
-          path: reportes/html1/playwright_reporte.html # Ruta del informe generado
-          retention-days: 30 # Días que el artefacto estará disponible
+          name: playwright-raw-report # El nombre del artefacto original, por si alguien quiere el nombre original
+          path: reportes/html1/playwright_reporte.html # Ahora subimos el index.html renombrado
+          retention-days: 30
