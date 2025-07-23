@@ -42,7 +42,7 @@ jobs:
           # -n 4: ejecuta las pruebas en paralelo con 4 workers (opcional, si tu framework lo soporta bien)
           # --html=reportes/html/playwright_reporte.html: genera un informe HTML
           # --self-contained-html: incluye CSS/JS en el mismo archivo HTML para fácil visualización
-          pytest PRV/test/ -s -v -n 4 --html=reportes/html/playwright_reporte.html --self-contained-html
+          pytest PRV/test/ -s -v -n 5 --template=html1/index.html --report=reportes/html1/playwright_reporte.html
 
       - name: Subir informe de pruebas (para depuración o descarga) # Sube el informe como un artefacto
         uses: actions/upload-artifact@v4
