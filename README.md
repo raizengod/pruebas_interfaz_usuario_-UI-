@@ -149,6 +149,11 @@ Para ejecutar las pruebas, asegúrate de estar en el entorno virtual activado y 
     pytest PRV\test\ -s -v --template=html1/index.html --report=reportes/html1/playwright_reporte.html
     ```
 
+5.  **Ejecuta las pruebas en paralelo y genera los resultados de reporte:**
+    ```bash
+    pytest PRV\test\ -s -v -n 3 --template=html1/index.html --report=reportes/html1/playwright_reporte.html
+    ```
+
 ## 📈 Reportes y Evidencias
 
 Todas las evidencias generadas durante la ejecución de las pruebas se almacenarán en el directorio test/reportes/:
