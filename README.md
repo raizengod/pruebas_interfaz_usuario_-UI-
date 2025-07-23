@@ -165,11 +165,20 @@ El proyecto está configurado con **GitHub Actions** para ejecutar las pruebas a
 
 A través de este proyecto, demuestro las siguientes habilidades clave en QA Automation:
 
-* **Diseño de Frameworks de Automatización:** Implementación de una estructura de proyecto modular y escalable (POM).
+* **Diseño de Frameworks de Automatización:** Implementación de una estructura de proyecto modular y escalable utilizando el patrón Page Object Model (POM).
 * **Automatización de Pruebas End-to-End:** Creación de escenarios de prueba realistas que cubren flujos de usuario completos.
-* **Uso de Playwright:** Experiencia en la interacción con elementos web, manejo de aserciones y configuración de pruebas con Playwright.
-* **Programación en Python:** Habilidad para escribir código limpio, legible y eficiente para la automatización.
-* **Integración Continua (CI):** Configuración y mantenimiento de pipelines de CI con GitHub Actions para una ejecución de pruebas automatizada y recurrente.
-* **Identificación y Reporte de Bugs:** Capacidad para diseñar pruebas que revelen defectos y, en un entorno de trabajo real, reportarlos adecuadamente.
-* **Mantenibilidad de Código:** Organización del código para facilitar futuras actualizaciones y extensiones de las pruebas.
+* **Uso Avanzado de Playwright:** Experiencia profunda en la interacción con elementos web, manejo de aserciones robustas, gestión de contextos de navegador, emulación de dispositivos y configuración de pruebas con Playwright.
+* **Programación en Python:** Habilidad para escribir código limpio, legible y eficiente para la automatización, aplicando principios de diseño de software.
+* **Integración Continua (CI):** Configuración y mantenimiento de pipelines de CI con GitHub Actions para una ejecución de pruebas automatizada y recurrente, esencial en el ciclo de vida del desarrollo de software.
+* **Identificación y Reporte de Bugs:** Capacidad para diseñar pruebas que revelen defectos y, en un entorno de trabajo real, reportarlos adecuadamente con evidencia relevante.
+* **Mantenibilidad de Código:** Organización del código para facilitar futuras actualizaciones y extensiones de las pruebas, promoviendo la colaboración y escalabilidad a largo plazo.
+* **Manejo de Datos en Pruebas:** Experiencia en la lectura y escritura de datos de prueba desde/hacia archivos Excel, CSV, JSON y XML.
 
+# 🔮 Mejoras Futuras / Roadmap
+
+Este proyecto es una base sólida, y siempre hay espacio para la mejora continua. Algunas ideas para futuras extensiones incluyen:
+
+* Integrar pruebas de rendimiento básicas utilizando herramientas específicas de Playwright o integraciones.
+* Configurar variables de entorno para la URL base y credenciales, mejorando la seguridad y flexibilidad del framework.
+* Explorar la paralelización de pruebas para reducir los tiempos de ejecución en suites grandes.
+* Extender la cobertura con pruebas de APIs para una validación completa del backend (si aplica).
