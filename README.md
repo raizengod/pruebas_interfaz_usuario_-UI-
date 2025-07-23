@@ -8,11 +8,11 @@ Este repositorio demuestra capacidades avanzadas en el diseño, desarrollo y eje
 ## ✨ Características Principales
 El framework incluye una serie de funcionalidades diseñadas para optimizar y enriquecer el proceso de automatización:
 
-* Tecnología Moderna: Implementado con Playwright, un framework rápido y confiable para la automatización de navegadores.
-* Lenguaje de Programación: Desarrollado en Python 3.13.5 (versión recomendada, aunque puede ser compatible con otras versiones de Python 3).
-* Gestión de Pruebas: Organización y ejecución de casos de prueba con Pytest, aprovechando su sistema de fixtures.
-* Cross-Browser & Responsive Testing: Soporte para pruebas en Chromium, Firefox y WebKit, incluyendo emulación de dispositivos móviles como iPhone 12 y Pixel 5 para asegurar la compatibilidad y el comportamiento responsivo.
-* Manejo de Elementos y Interacciones: Funciones globales para:
+* **Tecnología Moderna:** Implementado con Playwright, un framework rápido y confiable para la automatización de navegadores.
+* **Lenguaje de Programación:** Desarrollado en Python 3.13.5 (versión recomendada, aunque puede ser compatible con otras versiones de Python 3).
+* **Gestión de Pruebas:** Organización y ejecución de casos de prueba con Pytest, aprovechando su sistema de fixtures.
+* **Cross-Browser & Responsive Testing:** Soporte para pruebas en Chromium, Firefox y WebKit, incluyendo emulación de dispositivos móviles como iPhone 12 y Pixel 5 para asegurar la compatibilidad y el comportamiento responsivo.
+* **Manejo de Elementos y Interacciones:** Funciones globales para:
     * Validación de visibilidad de elementos.
     * Verificación de contenido de texto.
     * Relleno de campos de texto y numéricos.
@@ -23,25 +23,25 @@ El framework incluye una serie de funcionalidades diseñadas para optimizar y en
     * Interacción con iframes y nuevas ventanas/pestañas.
     * Eventos de teclado y ratón (hover, scroll).
     * Validación de títulos de página.
-* Gestión de Archivos: Capacidades para lectura de diversos formatos de datos:
+* **Gestión de Archivos:** Capacidades para lectura de diversos formatos de datos:
     * Excel (.xlsx)
     * CSV (.csv)
     * JSON (.json)
     * XML
-* Generación de Evidencias: Capturas de pantalla automáticas en puntos críticos y rutas configurables para almacenamiento de videos y trazas de ejecución.
-* Logging Configurable: Sistema de logging detallado con niveles de salida separados para consola y archivo, facilitando la depuración y el seguimiento de la ejecución.
-* Organización del Código: Estructura de proyecto modular que separa locators, páginas y utilidades, promoviendo la reusabilidad y mantenibilidad.
+* **Generación de Evidencias:** Capturas de pantalla automáticas en puntos críticos y rutas configurables para almacenamiento de videos y trazas de ejecución.
+* **Logging Configurable:** Sistema de logging detallado con niveles de salida separados para consola y archivo, facilitando la depuración y el seguimiento de la ejecución.
+* **Organización del Código:** Estructura de proyecto modular que separa locators, páginas y utilidades, promoviendo la reusabilidad y mantenibilidad.
 
 ## 🛠️ Tecnologías Utilizadas
-* **Playwright: Framework de automatización de navegadores.
-* **Python: Lenguaje de programación.
-* **Pytest: Framework para la gestión y ejecución de pruebas.
-* **pytest-html: Para la generación de informes HTML autocontenidos.
-* **Openpyxl: Librería para manejar archivos .xlsx.
-* **CSV: Módulo para trabajar con archivos .csv.
-* **JSON: Módulo para manejar archivos JSON.
-* **xml.etree.ElementTree: Módulo para trabajar con archivos XML.
-* **Logging: Módulo estándar de Python para el registro de eventos.
+* **Playwright:** Framework de automatización de navegadores.
+* **Python:** Lenguaje de programación.
+* **Pytest:** Framework para la gestión y ejecución de pruebas.
+* **pytest-html:** Para la generación de informes HTML autocontenidos.
+* **Openpyxl:** Librería para manejar archivos .xlsx.
+* **CSV:** Módulo para trabajar con archivos .csv.
+* **JSON:** Módulo para manejar archivos JSON.
+* **xml.etree.ElementTree:** Módulo para trabajar con archivos XML.
+* **Logging:** Módulo estándar de Python para el registro de eventos.
 
 ## 📂 Estructura del Proyecto
 La estructura del proyecto está diseñada para ser clara, modular y fácil de mantener:
@@ -95,7 +95,7 @@ La estructura del proyecto está diseñada para ser clara, modular y fácil de m
 **Clonar el repositorio:**
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/raizengod/pruebas_interfaz_usuario_-UI-.git
 cd PRV
 ```
 
@@ -151,8 +151,25 @@ Para ejecutar las pruebas, asegúrate de estar en el entorno virtual activado y 
 
 ## 📈 Reportes y Evidencias
 
-* Todas las evidencias generadas durante la ejecución de las pruebas se almacenarán en el directorio test/reportes/:
+Todas las evidencias generadas durante la ejecución de las pruebas se almacenarán en el directorio test/reportes/:
 * test/reportes/html/: Contiene los informes HTML de Pytest.
 * test/reportes/video/: Videos de la ejecución de las pruebas (si están configurados en conftest.py).
 * test/reportes/traceview/: Archivos de traza de Playwright para análisis detallado.
 * test/reportes/imagen/: Capturas de pantalla tomadas durante la ejecución.
+
+## 📈 Integración Continua (CI)
+
+El proyecto está configurado con **GitHub Actions** para ejecutar las pruebas automáticamente en cada push a la rama principal y en cada pull request. El archivo de configuración se encuentra en `.github/workflows/playwright.yml`. Esto garantiza que cualquier cambio en el código se valide rápidamente, detectando regresiones de manera temprana.
+
+## ✅ Habilidades Demostradas
+
+A través de este proyecto, demuestro las siguientes habilidades clave en QA Automation:
+
+* **Diseño de Frameworks de Automatización:** Implementación de una estructura de proyecto modular y escalable (POM).
+* **Automatización de Pruebas End-to-End:** Creación de escenarios de prueba realistas que cubren flujos de usuario completos.
+* **Uso de Playwright:** Experiencia en la interacción con elementos web, manejo de aserciones y configuración de pruebas con Playwright.
+* **Programación en Python:** Habilidad para escribir código limpio, legible y eficiente para la automatización.
+* **Integración Continua (CI):** Configuración y mantenimiento de pipelines de CI con GitHub Actions para una ejecución de pruebas automatizada y recurrente.
+* **Identificación y Reporte de Bugs:** Capacidad para diseñar pruebas que revelen defectos y, en un entorno de trabajo real, reportarlos adecuadamente.
+* **Mantenibilidad de Código:** Organización del código para facilitar futuras actualizaciones y extensiones de las pruebas.
+
