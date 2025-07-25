@@ -18,8 +18,8 @@ from PRV.locator.locator_barraNavegacion import BarraNavLocatorPage
     params=[
         # Resoluciones de escritorio
         #{"browser": "chromium", "resolution": {"width": 1920, "height": 1080}, "device": None},
-        {"browser": "firefox", "resolution": {"width": 1920, "height": 1080}, "device": None},
-        #{"browser": "webkit", "resolution": {"width": 1920, "height": 1080}, "device": None},
+        #{"browser": "firefox", "resolution": {"width": 1920, "height": 1080}, "device": None},
+        {"browser": "webkit", "resolution": {"width": 1920, "height": 1080}, "device": None},
         # Emulación de dispositivos móviles
         #{"browser": "chromium", "device": "iPhone 12", "resolution": None},
         #{"browser": "firefox", "device": "iPhone 12", "resolution": None}, # Descomentar si es necesario
