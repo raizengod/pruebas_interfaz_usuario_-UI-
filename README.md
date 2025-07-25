@@ -103,10 +103,14 @@ cd PRV
 
 ```bash
 python -m venv mv_PRV
-# En Windows
 .\venv\Scripts\activate
-# En macOS/Linux
+# En Windows
+```
+
+```bash
+python -m venv mv_PRV
 source venv/bin/activate
+# En macOS/Linux
 ```
 
 **Instalar las dependencias:**
