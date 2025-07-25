@@ -17,11 +17,11 @@ from PRV.locator.locator_barraNavegacion import BarraNavLocatorPage
     scope="function",
     params=[
         # Resoluciones de escritorio
-        #{"browser": "chromium", "resolution": {"width": 1920, "height": 1080}, "device": None},
-        #{"browser": "firefox", "resolution": {"width": 1920, "height": 1080}, "device": None},
-        #{"browser": "webkit", "resolution": {"width": 1920, "height": 1080}, "device": None},
+        {"browser": "chromium", "resolution": {"width": 1920, "height": 1080}, "device": None},
+        {"browser": "firefox", "resolution": {"width": 1920, "height": 1080}, "device": None},
+        {"browser": "webkit", "resolution": {"width": 1920, "height": 1080}, "device": None},
         # Emulación de dispositivos móviles
-        #{"browser": "chromium", "device": "iPhone 12", "resolution": None},
+        {"browser": "chromium", "device": "iPhone 12", "resolution": None},
         #{"browser": "firefox", "device": "iPhone 12", "resolution": None}, # Descomentar si es necesario
         #{"browser": "webkit", "device": "iPhone 12", "resolution": None},
         {"browser": "webkit", "device": "Pixel 5", "resolution": None}, # Añadido para set_up_AccionBoton y set_up_RadioOption
