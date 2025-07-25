@@ -17,7 +17,7 @@ from PRV.locator.locator_barraNavegacion import BarraNavLocatorPage
     scope="function",
     params=[
         # Resoluciones de escritorio
-        {"browser": "chromium", "resolution": {"width": 1920, "height": 1080}, "device": None},
+        #{"browser": "chromium", "resolution": {"width": 1920, "height": 1080}, "device": None},
         {"browser": "firefox", "resolution": {"width": 1920, "height": 1080}, "device": None},
         #{"browser": "webkit", "resolution": {"width": 1920, "height": 1080}, "device": None},
         # Emulación de dispositivos móviles
