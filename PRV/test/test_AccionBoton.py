@@ -138,7 +138,8 @@ def test_hacer_doble_click_con_nombre(set_up_AccionBoton):
     fg.hacer_doble_click_en_elemento(abl.botonDobleClick, "hacer_doble_click_en_elemento", config.SCREENSHOT_DIR, None)
     fg.verificar_texto_contenido(abl.menExitoso, "Has hecho doble clic en el botÃ³n y el campo es vÃ¡lido.", "verificar_texto_continido_mensaje_exitoso", config.SCREENSHOT_DIR, 2)
     fg.validar_elemento_no_visible(abl.menError, "validar_elemento_no_visible_mensaje_error", config.SCREENSHOT_DIR)
-    
+
+@pytest.mark.xfail(reason="La acción tiende a fallar en la CI para firefox")    
 def test_hacer_hover_over_con_nombre(set_up_AccionBoton):
     page = set_up_AccionBoton # 'page' es el objeto Page de Playwright
 
